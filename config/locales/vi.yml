@@ -1,0 +1,38 @@
+vi:
+  errors:
+    messages:
+      required: "không thể để trắng"
+      confirmation: "không khớp với %{attribute}"
+  activerecord:
+    attributes:
+      user:
+        email: "Địa chỉ email"
+        first_name: "Tên"
+        last_name: "Họ và tên đệm"
+        telephone: "Số điện thoại"
+        address: "Địa chỉ"
+        birthday: "Ngày sinh"
+        gender: "Giới tính"
+        role: "Vai trò"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+      product:
+        category: "Loại mặt hàng"
+        name: "Tên mặt hàng"
+        description: "Mô tả"
+        price: "Giá bán"
+        rating: "Đánh giá"
+        inventory: "Tồn kho"
+        unit: "Đơn vị tính"
+      category:
+        title: "Tên loại hàng"
+        description: "Mô tả"
+      order:
+        user: "Người đặt hàng"
+        total_price: "Giá tổng cộng"
+        status: "Trạng thái đơn hàng"
+      order_item:
+        order: "Đơn hàng"
+        product: "Sản phẩm"
+        quantity: "Số lượng"
+        current_price: "Giá sản phẩm"

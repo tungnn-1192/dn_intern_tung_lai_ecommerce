@@ -1,0 +1,37 @@
+length:
+  telephone:
+    min: 9
+    max: 12
+  digit_255: 255
+  digit_50: 50
+  digit_16: 16
+  digit_12: 12
+  digit_8: 8
+  digit_9: 9
+seeder:
+  description_paragraphs: 1
+  count:
+    products: 20
+    users: 10
+    orders:
+      min: 1
+      max: 5
+    order_items:
+      min: 1
+      max: 5
+  digit:
+    price: 6
+    rating:
+      min: 0
+      max: 5
+    inventory:
+      min: 10
+      max: 1000
+    age:
+      min: 12
+      max: 55
+    male_probability: 0.5
+    quantity:
+      min: 1
+      max: 5
+  unit: "Piece"

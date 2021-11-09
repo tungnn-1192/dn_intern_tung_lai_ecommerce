@@ -11,6 +11,9 @@ gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "webpacker", "~> 5.0"
+gem "rails-i18n"
+gem "bcrypt"
+gem "config"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -25,6 +28,7 @@ group :development, :test do
 
   # db: mysql2
   gem "mysql2"
+  gem "faker"
 end
 
 group :development do

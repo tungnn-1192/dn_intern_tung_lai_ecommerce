@@ -1,0 +1,13 @@
+seeder:
+  password: ""
+  admin:
+    email: ""
+    first_name: ""
+    last_name: ""
+    telephone: "xxxx xxx xxx"
+    address: ""
+    birthday: "yyyy-mm-dd"
+    gender: "male"
+    role: "admin"
+    password: ""
+    password_confirmation: ""
