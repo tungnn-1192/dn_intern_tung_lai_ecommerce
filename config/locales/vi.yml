@@ -1,4 +1,33 @@
 vi:
+  app_name: "TL Shop"
+  languages:
+    vi: "Tiếng Việt"
+    en: "Tiếng Anh"
+  layouts:
+    header:
+      home: "Trang chủ"
+      login: "Đăng nhập"
+    footer:
+      address: "Địa chỉ: %{address}"
+      phone: "Điện thoại: %{phone_number}"
+      email: "Email: %{email}"
+      about_us: "Về chúng tôi"
+      about_our_shop: "Về TL Shop"
+      secure_shopping: "Mua hàng bảo mật"
+      delivery_information: "Thông tin giao hàng"
+      privacy_policy: "Chính sách bảo mật"
+      our_sitemap: "Sitemap"
+      who_we_are: "Who We Are"
+      our_services: "Các dịch vụ"
+      projects: "Các dự án"
+      contact: "Liên hệ"
+      innovation: "Đổi mới"
+      testimonials: "Chứng nhận"
+      join_our_newsletter:
+        heading: "Tham gia nhận thông báo"
+        para: "Đăng ký để nhận thông báo mới nhất qua E-mail!"
+      enter_your_mail: "email_cua_ban@gmail.com"
+      subscribe: "Đăng ký"
   errors:
     messages:
       required: "không thể để trắng"
