@@ -1,3 +1,18 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.header__menu {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li {
+      margin-right: 0;
+    }
+  }
+}
+.flag__wrapper {
+  width: 27px;
+  height: 14px;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
