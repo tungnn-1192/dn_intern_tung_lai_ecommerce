@@ -22,7 +22,7 @@
       <span class="arrow_carrot-down"></span>
       <ul>
         <% I18n.available_locales.each do |lang| %>
-          <li><%= link_to t("languages.#{lang}"), "#" %></li>
+          <li><%= link_to t("languages.#{lang}"), (request.path+"?locale=#{lang}") %></li>
         <% end %>
       </ul>
     </div>
@@ -90,7 +90,7 @@
               <span class="arrow_carrot-down"></span>
               <ul>
                 <% I18n.available_locales.each do |lang| %>
-                  <li><%= link_to t("languages.#{lang}"), "#" %></li>
+                  <li><%= link_to t("languages.#{lang}"), (request.path+"?locale=#{lang}") %></li>
                 <% end %>
               </ul>
             </div>
