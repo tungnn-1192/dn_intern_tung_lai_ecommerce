@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root "static_pages#index"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "cart" => "sessions#cart_index"
+  get "cart/add/:id" => "sessions#cart_add", :as => "cart_add"
+  delete "cart/remove/(/:id(/:all))" => "session#cart_delete"
 end
