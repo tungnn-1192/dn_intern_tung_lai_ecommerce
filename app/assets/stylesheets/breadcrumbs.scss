@@ -1,0 +1,18 @@
+.breadcrumb-section {
+  margin-bottom: 40px;
+}
+.breadcrumb {
+  background-color: transparent;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-decoration: italic;
+  li {
+    flex-basis: 75px;
+    a {
+      color: white;
+    }
+  }
+}

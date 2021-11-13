@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   include SessionsHelper
   def cart_index
+    add_breadcrumb "Cart", cart_url
     fake_cart
     cart_contents
   end
