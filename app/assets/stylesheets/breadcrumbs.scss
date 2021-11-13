@@ -5,7 +5,7 @@
   background-color: transparent;
   justify-content: center;
   font-size: 1.25rem;
-  color: white;
+  color: #e0e0e0;
   margin-bottom: 0;
   font-weight: bold;
   text-decoration: italic;
@@ -13,6 +13,7 @@
     flex-basis: 75px;
     a {
       color: white;
+      text-decoration: underline;
     }
   }
 }

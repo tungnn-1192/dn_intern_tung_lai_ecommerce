@@ -1,3 +1,4 @@
+<% provide :title, t("layouts.header.cart")%>
 <!-- Shoping Cart Section Begin -->
 <section class="shoping-cart spad">
   <div class="container">
@@ -15,7 +16,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <%# <tr>
                 <td class="shoping__cart__item">
                   <img src="img/cart/cart-1.jpg" alt="">
                   <h5>Vegetable’s Package</h5>
@@ -36,7 +37,7 @@
                 <td class="shoping__cart__item__close">
                   <span class="icon_close"></span>
                 </td>
-              </tr>
+              </tr> %>
               <% if cart_contents.any? %>
                 <% cart_contents.each do |item| %>
                   <tr>
@@ -45,7 +46,8 @@
                       <h5><%= item[1][:name] %></h5>
                     </td>
                     <td class="shoping__cart__price">
-                      $<%= item[1][:price] %>
+                      <%= print_price item[1][:price] %>
+                      <span class="currency-unit">đ</span>
                     </td>
                     <td class="shoping__cart__quantity">
                       <div class="quantity">
@@ -55,7 +57,8 @@
                       </div>
                     </td>
                     <td class="shoping__cart__total">
-                      $<%= item[1][:price].to_f * item[0][1].to_f %>
+                      <%= print_price item[1][:price] * item[0][1] %>
+                      <span class="currency-unit">đ</span>
                     </td>
                     <td class="shoping__cart__item__close">
                       <span class="icon_close"></span>
@@ -80,8 +83,8 @@
         <div class="shoping__checkout">
           <h5>Cart Total</h5>
           <ul>
-            <li>Subtotal <span><%= subtotal %></span></li>
-            <li>Total <span><%= subtotal %></span></li>
+            <li>Subtotal <span class="currency-unit">đ</span><span><%= print_price subtotal %></span></li>
+            <li>Total <span class="currency-unit">đ</span><span><%= print_price subtotal %></span></li>
           </ul>
           <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
         </div>
