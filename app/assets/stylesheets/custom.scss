@@ -17,3 +17,28 @@
     border-left: 3px solid;
   }
 }
+.latest-product__item__text {
+  span {
+    display: initial;
+  }
+}
+
+.shoping__cart__table table tbody tr td.shoping__cart__item {
+  width: initial;
+}
+
+.shoping__checkout {
+  h5 {
+    font-size: 1.5rem;
+  }
+  ul {
+    padding-left: 16px;
+    padding-right: 25px;
+    li {
+      font-size: 1.25rem;
+    }
+  }
+}
+.font-size-2 {
+  font-size: 2rem !important;
+}
