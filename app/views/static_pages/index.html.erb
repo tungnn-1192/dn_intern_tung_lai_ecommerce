@@ -23,6 +23,7 @@
 <!-- Categories Section End -->
 
 <!-- Featured Section Begin -->
+<% _products = featured_products %>
 <section class="featured spad">
   <div class="container">
     <div class="row">
@@ -31,16 +32,19 @@
           <h2><%= t "home.featured_product" %></h2>
         </div>
         <div class="featured__controls">
-          <ul>
-            <li class="active" data-filter="*"><%= t "home.filter.all" %></li>
-            <li data-filter=".oranges"><%= t "home.filter.food" %></li>
-            <li data-filter=".fresh-meat"><%= t "home.filter.computer" %></li>
-          </ul>
+          <nav>
+            <ul>
+              <% _products.each_with_index do |product,indx| %>
+                <li <%= "class=\"active\"" if indx==0 %> data-filter=<%= ".#{product.category.title}"%> >
+                  <%= product.category.title %>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
     <div class="row featured__filter">
-
       <!-- filter data later -->
       <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
         <div class="featured__item">
@@ -66,6 +70,9 @@
           </div>
         </div>
       </div>
+      <% _products.each do |product| %>
+        <%= render "layouts/product_card", product: product, classes: [product.category.title, product.category.parent&.title]%>
+      <% end %>
       <!-- filter data later -->
 
     </div>

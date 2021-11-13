@@ -15,6 +15,7 @@ gem "rails-i18n"
 gem "bcrypt"
 gem "config"
 gem "breadcrumbs_on_rails"
+gem "strings-case"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
