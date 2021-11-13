@@ -23,7 +23,10 @@
 <!-- Categories Section End -->
 
 <!-- Featured Section Begin -->
-<% _products = featured_products %>
+<%
+  products_array = featured_products
+  mixitup_filters = to_filters_hash products_array
+%>
 <section class="featured spad">
   <div class="container">
     <div class="row">
@@ -34,9 +37,10 @@
         <div class="featured__controls">
           <nav>
             <ul>
-              <% _products.each_with_index do |product,indx| %>
-                <li <%= "class=\"active\"" if indx==0 %> data-filter=<%= ".#{product.category.title}"%> >
-                  <%= product.category.title %>
+              <li class="active" data-filter="*">All</li>
+              <% mixitup_filters.each do |_id,title| %>
+                <li data-filter=<%= ".#{to_snakecase title}"%> >
+                  <%= title %>
                 </li>
               <% end %>
             </ul>
@@ -45,36 +49,9 @@
       </div>
     </div>
     <div class="row featured__filter">
-      <!-- filter data later -->
-      <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-        <div class="featured__item">
-          <div
-            class="featured__item__pic set-bg"
-            data-setbg="img/featured/feature-1.jpg"
-          >
-            <ul class="featured__item__pic__hover">
-              <li>
-                <a href="#"><i class="fa fa-heart"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-retweet"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-shopping-cart"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="featured__item__text">
-            <h6><a href="#">Crab Pool Security</a></h6>
-            <h5>$30.00</h5>
-          </div>
-        </div>
-      </div>
-      <% _products.each do |product| %>
-        <%= render "layouts/product_card", product: product, classes: [product.category.title, product.category.parent&.title]%>
+      <% products_array.each do |product| %>
+        <%= render "layouts/product_card", product: product, classes: ["mix", product.category.title, product.category.parent&.title]%>
       <% end %>
-      <!-- filter data later -->
-
     </div>
   </div>
 </section>
