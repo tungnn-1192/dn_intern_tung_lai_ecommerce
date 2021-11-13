@@ -5,20 +5,20 @@
   <div class="container">
     <div class="row">
       <div class="categories__slider owl-carousel">
-        <% categories_tree.each do |cat| %>
+        <% categories_carousel.each do |cat| %>
           <div class="col-lg-3">
             <div
               class="categories__item set-bg"
               data-setbg="img/categories/cat-1.jpg"
             >
-              <h5><%= link_to cat[0], "#" %></h5>
+              <h5><%= link_to cat.title, "#" %></h5>
             </div>
           </div>
         <% end %>
-        </div>
       </div>
     </div>
   </div>
+</div>
 </section>
 <!-- Categories Section End -->
 
@@ -76,7 +76,7 @@
 <!-- Latest Product Section Begin -->
 <section class="latest-product spad">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-around">
       <div class="col-lg-4 col-md-6">
         <div class="latest-product__text">
           <h4><%= t "home.recent" %></h4>
