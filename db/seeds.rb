@@ -7,7 +7,7 @@ class Seeder
     def sym_to_name sym
       sym = sym.to_s
       sym[0] = sym[0].upcase
-      sym.sub "_", " "
+      sym.sub! "_", " "
       sym
     end
 
