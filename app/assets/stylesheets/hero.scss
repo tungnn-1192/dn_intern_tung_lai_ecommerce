@@ -3,5 +3,9 @@
   ul {
     max-height: 461px;
     overflow-y: auto;
+    ul {
+      border: 0;
+      border-left: 3px solid;
+    }
   }
 }
