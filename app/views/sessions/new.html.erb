@@ -1,0 +1,11 @@
+<div class="spad">
+  <h2>Đăng nhập</h2>
+  <%= form_for :user do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.submit "Đăng nhập" %>
+  <% end %>
+  <p>Chưa có tài khoản? <%= link_to "Đăng ký ngay!", "#" %></p>
+</div>

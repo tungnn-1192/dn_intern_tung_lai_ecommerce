@@ -58,4 +58,12 @@ module SessionsHelper
 
     subtotal.round(2)
   end
+
+  def set_return_url url
+    sessions[:return] = url
+  end
+
+  def current_user
+    @user
+  end
 end

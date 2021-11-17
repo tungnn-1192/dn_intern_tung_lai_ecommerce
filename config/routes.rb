@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   get "cart" => "sessions#cart_index"
   get "cart/add/:id" => "sessions#cart_add", :as => "cart_add"
   delete "cart/remove/(/:id(/:all))" => "session#cart_delete"
+  get "/login" => "sessions#new"
+  post "/login" => "sessions#create"
+  get "/logout" => "sessions#destroy"
 end
