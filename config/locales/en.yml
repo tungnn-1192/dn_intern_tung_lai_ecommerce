@@ -1,8 +1,5 @@
 en:
   app_name: "TL Shop"
-  languages:
-    vi: "Vietnamese"
-    en: "English"
   labels:
     category:
       all: "All Categories"
@@ -16,7 +13,9 @@ en:
     recent: "Recent"
     top_rated: "Top Rated"
   cart:
+    page_title: "Cart"
     products: "Products"
+    inventory: "Inventory"
     price: "Price"
     qty: "Quantity"
     total: "Total"
@@ -47,11 +46,6 @@ en:
       phone: "Phone: %{phone_number}"
       email: "Email: %{email}"
       about_us: "About Us"
-      join_our_newsletter:
-        heading: "Join our newsletter"
-        para: "Subscribe to receive our latest updates via E-mail!"
-      enter_your_mail: "your_email_address@gmail.com"
-      subscribe: "Subscribe"
 
   activerecord:
     attributes:

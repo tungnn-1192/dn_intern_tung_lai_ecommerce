@@ -1,8 +1,5 @@
 vi:
   app_name: "TL Shop"
-  languages:
-    vi: "Tiếng Việt"
-    en: "Tiếng Anh"
   labels:
     category:
       all: "Tất cả mục"
@@ -15,6 +12,18 @@ vi:
       computer: "Máy tính"
     recent: "Xem gần đây"
     top_rated: "Đánh giá cao"
+  cart:
+    page_title: "Giỏ hàng"
+    products: "Sản phầm"
+    inventory: "Tồn kho"
+    price: "Giá"
+    qty: "Số lượng"
+    total: "Tổng"
+    cart_total: "Giá trị giỏ hàng"
+    btn:
+      continue_shopping: "MUA THÊM"
+      update_cart: "CẬP NHẬT GIỎ HÀNG"
+      checkout: "CHUYỂN TỚI ĐẶT HÀNG"
   layouts:
     header:
       home: "Trang chủ"
@@ -37,10 +46,6 @@ vi:
       phone: "Điện thoại: %{phone_number}"
       email: "Email: %{email}"
       about_us: "Về chúng tôi"
-      join_our_newsletter:
-        heading: "Tham gia nhận thông báo"
-        para: "Đăng ký để nhận thông báo mới nhất qua E-mail!"
-      enter_your_mail: "email_cua_ban@gmail.com"
       subscribe: "Đăng ký"
   errors:
     messages:

@@ -29,7 +29,10 @@
     padding-left: 16px;
     padding-right: 25px;
     li {
-      font-size: 1.25rem;
+      font-size: 2rem;
+      span {
+        font-size: 2rem;
+      }
     }
   }
 }
@@ -82,3 +85,6 @@
   }
 }
 
+a, a:visited {
+  color: inherit;
+}

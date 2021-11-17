@@ -3,44 +3,32 @@
 <div class="humberger__menu__wrapper">
   <div class="humberger__menu__logo">
     <%= link_to root_path do %>
-      <img src="/img/logo.png" alt="" />
+    <img src="/img/logo.png" alt="" />
     <% end %>
   </div>
-  <div class="humberger__menu__cart">
-    <ul>
-      <li>
-        <%= link_to "#" do %>
-          <i class="fa fa-shopping-bag"></i> <span><%= cart_count %>
-          <% end %>
-        </li>
-      </ul>
-      <div class="header__cart__price"><%= t ".total" %> <span><%= translate_price subtotal %></span></div>
-    </div>
-    <div class="humberger__menu__widget">
-      <div class="humberger__menu__widget">
-        <div class="header__top__right__language">
-          <div class="flag__wrapper"><img src=<%= "/img/language-#{I18n.locale}.png" %> alt="" /></div>
-          <div><%= Settings.languages[I18n.locale] %></div>
-          <span class="arrow_carrot-down"></span>
-          <ul>
-            <% I18n.available_locales.each do |lang| %>
-              <li><%= link_to Settings.languages[lang], (request.path+"?locale=#{lang}") %></li>
-            <% end %>
-          </ul>
-        </div>
-        <div class="header__top__right__auth">
-          <a href="#"><i class="fa fa-user"></i> <%= t ".login" %></a>
-        </div>
-      </div>
-    </div>
-    <nav class="humberger__menu__nav mobile-menu">
+  <div class="humberger__menu__widget">
+    <div class="header__top__right__language">
+      <div class="flag__wrapper"><img src=<%= "/img/language-#{I18n.locale}.png" %> alt="" /></div>
+      <div><%= Settings.languages[I18n.locale] %></div>
+      <span class="arrow_carrot-down"></span>
       <ul>
-        <li class="active"><%= link_to t(".home"), root_path %></a></li>
+        <% I18n.available_locales.each do |lang| %>
+          <li><a href="<%= change_path_locale request.path, lang %>"><%= Settings.languages[lang] %></a></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="header__top__right__auth">
+      <a href="#"><i class="fa fa-user"></i> <%= t ".login" %></a>
+    </div>
+  </div>
+  <nav class="humberger__menu__nav mobile-menu">
+    <ul>
+      <li class="active"><%= link_to t(".home"), root_path %></a></li>
       <li><%= link_to t(".shop"), "#" %></li>
       <li>
         <a><%= t ".order" %></a>
         <ul class="header__menu__dropdown">
-          <li><%= link_to t(".cart"), "#" %></li>
+          <li><%= link_to t(".cart"), carts_path %></li>
           <li><%= link_to t(".checkout"), "#" %></li>
         </ul>
       </li>
@@ -77,7 +65,7 @@
               <span class="arrow_carrot-down"></span>
               <ul>
                 <% I18n.available_locales.each do |lang| %>
-                  <li><%= link_to Settings.languages[lang], (request.path+"?locale=#{lang}") %></li>
+                  <li><a href="<%= change_path_locale request.path, lang %>"><%= Settings.languages[lang] %></a></li>
                 <% end %>
               </ul>
             </div>
@@ -102,33 +90,38 @@
         <nav class="header__menu">
           <ul>
             <li class="active"><%= link_to t(".home"), root_path %></a></li>
-          <li><%= link_to t(".shop"), "#" %></li>
-          <li>
-            <a><%= t ".order" %></a>
-            <ul class="header__menu__dropdown">
-              <li><%= link_to t(".cart"), "#{}" %></li>
-              <li><%= link_to t(".checkout"), "#" %></li>
-            </ul>
-          </li>
-          <li><%= link_to t(".contact"), "#" %></li>
-        </nav>
-      </div>
-      <div class="col-lg-3">
-        <div class="header__cart">
-          <ul>
+            <li><%= link_to t(".shop"), "#" %></li>
             <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-shopping-bag"></i> <span><%= cart_count %>
+              <a><%= t ".order" %></a>
+              <ul class="header__menu__dropdown">
+                <li><%= link_to t(".cart"), carts_path %></li>
+                <li><%= link_to t(".checkout"), "#" %></li>
+              </ul>
+            </li>
+            <li><%= link_to t(".contact"), "#" %></li>
+          </nav>
+        </div>
+        <div class="col-lg-3">
+          <div class="header__cart">
+            <ul>
+              <li>
+                <%= link_to carts_path do %>
+                <i class="fa fa-shopping-bag"></i>
+                <span id="shopping__bag__count"><%= cart_count %></span>
                 <% end %>
               </li>
             </ul>
-            <div class="header__cart__price"><%= t ".total" %> <span><%= translate_price subtotal %></span></div>
+            <div class="header__cart__price">
+              <%= t ".total" %>
+              <span><%= translate_price subtotal %></span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="humberger__open">
-        <i class="fa fa-bars"></i>
-      </div>
     </div>
-  </header>
-  <!-- Header Section End -->
+    <div class="humberger__open">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</header>
+<!-- Header Section End -->

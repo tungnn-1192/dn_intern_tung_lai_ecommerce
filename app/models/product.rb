@@ -14,4 +14,12 @@ class Product < ApplicationRecord
         (lambda do |max|
           order(rating: :desc).limit(max)
         end)
+  scope :pluck_attr,
+        (lambda do |id, attr|
+          where(id: id).pluck(attr)
+        end)
+  scope :basic_product_info,
+        (lambda do |id|
+          select(:id, :name, :price, :inventory).find_by(id: id)
+        end)
 end
