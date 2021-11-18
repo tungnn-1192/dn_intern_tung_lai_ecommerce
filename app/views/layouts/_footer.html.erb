@@ -1,0 +1,30 @@
+<!-- Footer Section Begin -->
+<footer class="footer spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="footer__about">
+          <div class="footer__about__logo">
+            <%= link_to root_path do %>
+              <img src="/img/logo.png" alt="" />
+            <% end %>
+          </div>
+          <ul>
+            <li><%= t ".address", address: "236 Bạch Đằng, Phước Ninh, Hải Châu, Đà Nẵng" %></li>
+            <li><%= t ".phone", phone_number: "0765 432 198" %></li>
+            <li><%= t ".email", email: "admin@tlshop.example.com" %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="footer__widget">
+          <h6><%= t ".useful_links" %></h6>
+          <ul>
+            <li><a href=""><%= t ".about_us" %></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer Section End -->
