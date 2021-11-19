@@ -31,6 +31,24 @@ vi:
       continue_shopping: "MUA THÊM"
       update_cart: "CẬP NHẬT GIỎ HÀNG"
       checkout: "CHUYỂN TỚI ĐẶT HÀNG"
+  admin:
+    layouts:
+      sidebar:
+        dashboard: "Bảng điều khiển"
+        pages: "Trang"
+        logout: "Đăng xuất"
+        choose_language: "Chọn ngôn ngữ của bạn"
+    topbar:
+      choose_language: "Choose your language"
+    sessions:
+      new:
+        login: "Đăng nhập"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        remember_me: "Ghi nhớ đăng nhập"
+    logged_in_as: "Đăng nhập thành công dưới tên %{name}"
+    log_in_failed: "Địa chỉ email hoặc mật khẩu không đúng"
+    users_not_allowed: "Xin lỗi bạn, chỉ có admin mới có quyền truy cập tính năng này"
   layouts:
     header:
       home: "Trang chủ"

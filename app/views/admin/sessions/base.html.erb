@@ -16,6 +16,16 @@
         <div class="col-xl-6 col-lg-12 col-md-9">
           <div class="card shadow-sm my-5">
             <div class="card-body p-0">
+              <div class="row p-3">
+                <div class="dropdown show ml-auto">
+                  <div class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                    <%= Settings.languages[I18n.locale] %>
+                  </div>
+                  <div id="dropdownMenuLink" class="dropdown-list dropdown-menu shadow">
+                    <%= render "shared/list_languages" %>
+                  </div>
+                </div>
+              </div>
               <%= yield %>
             </div>
           </div>
