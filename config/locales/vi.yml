@@ -1,4 +1,47 @@
 vi:
+  app_name: "TL Shop"
+  languages:
+    vi: "Tiếng Việt"
+    en: "Tiếng Anh"
+  labels:
+    category:
+      all: "Tất cả mục"
+      cat: "Danh mục"
+  home:
+    featured_product: "Sản phẩm nổi bật"
+    filter:
+      all: "Tất cả"
+      food: "Thực phẩm"
+      computer: "Máy tính"
+    recent: "Xem gần đây"
+    top_rated: "Đánh giá cao"
+  layouts:
+    header:
+      home: "Trang chủ"
+      shop: "Mua hàng"
+      cart: "Giỏ hàng"
+      checkout: "Thanh toán"
+      order: "Đơn hàng"
+      contact: "Liên hệ"
+      login: "Đăng nhập"
+      total: "tổng:"
+      site_email: "admin@tlshop.example.com"
+    hero:
+      search_btn_txt: "Tìm kiếm"
+      phone: "%{phone_number}"
+      what_do_you_need?: "Bạn cần mua gì?"
+      support: "hỗ trợ 24/7"
+    footer:
+      useful_links: "Thông tin khác"
+      address: "Địa chỉ: %{address}"
+      phone: "Điện thoại: %{phone_number}"
+      email: "Email: %{email}"
+      about_us: "Về chúng tôi"
+      join_our_newsletter:
+        heading: "Tham gia nhận thông báo"
+        para: "Đăng ký để nhận thông báo mới nhất qua E-mail!"
+      enter_your_mail: "email_cua_ban@gmail.com"
+      subscribe: "Đăng ký"
   errors:
     messages:
       required: "không thể để trắng"
@@ -36,3 +79,10 @@ vi:
         product: "Sản phẩm"
         quantity: "Số lượng"
         current_price: "Giá sản phẩm"
+  number:
+    currency:
+      format:
+        unit: '<span class="currency-unit">đ</span>'
+        delimiter: '.'
+        precision: 0
+        format: '%n %u'

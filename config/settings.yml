@@ -8,6 +8,8 @@ length:
   digit_12: 12
   digit_8: 8
   digit_9: 9
+  featured_products:
+    max: 12
 seeder:
   description_paragraphs: 1
   count:
@@ -35,3 +37,8 @@ seeder:
       min: 1
       max: 5
   unit: "Piece"
+languages:
+  vi: "Tiếng Việt"
+  en: "English"
+rates_to:
+  usd: 22653.5

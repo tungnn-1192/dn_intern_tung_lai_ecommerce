@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DnInternTungLaiEcommerce</title>
+    <title><%= full_title yield :title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+
   </head>
 
   <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+    <%= render "layouts/header" %>
+    <%= render "layouts/hero" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </body>
 </html>

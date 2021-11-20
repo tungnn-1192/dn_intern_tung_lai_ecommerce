@@ -1,0 +1,9 @@
+<%= link_to("#", class: "latest-product__item") do %>
+  <div class="latest-product__item__pic">
+    <img src="img/latest-product/lp-1.jpg" alt="" />
+  </div>
+  <div class="latest-product__item__text">
+    <h5><%= product.name %></h5>
+    <p><span><%= translate_price product.price %></span></p>
+  </div>
+<% end %>
