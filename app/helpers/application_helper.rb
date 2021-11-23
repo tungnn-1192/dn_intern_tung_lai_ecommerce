@@ -12,4 +12,15 @@ module ApplicationHelper
     price /= Settings.rates_to.usd if I18n.locale == :en
     number_to_currency price
   end
+
+  def change_path_locale path, locale
+    elms = path.split("/")
+    return "/#{locale}#{path}" if (elms.length < 2) ||
+                                  !elms[1].match?(
+                                    /#{I18n.available_locales.join("|")}/
+                                  )
+
+    elms[1] = locale
+    elms.join("/")
+  end
 end

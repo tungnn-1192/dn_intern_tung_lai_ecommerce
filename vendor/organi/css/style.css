@@ -2242,6 +2242,7 @@ ol {
 
 .checkout__order .checkout__order__subtotal span {
 	float: right;
+  color: #dd2222;
 }
 
 .checkout__order .checkout__input__checkbox label {
@@ -2249,17 +2250,17 @@ ol {
 }
 
 .checkout__order .checkout__order__total {
-	font-size: 18px;
-	color: #1c1c1c;
-	font-weight: 700;
-	border-bottom: 1px solid #e1e1e1;
-	padding-bottom: 15px;
-	margin-bottom: 25px;
+  font-size: 18px;
+  color: #1c1c1c;
+  font-weight: 700;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .checkout__order .checkout__order__total span {
-	float: right;
-	color: #dd2222;
+  float: right;
+  color: #dd2222;
 }
 
 .checkout__order button {

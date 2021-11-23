@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  include SessionsHelper
   include CategoriesHelper
+  include CartsHelper
 
   before_action :set_locale, :fake_cart
   protect_from_forgery with: :exception
@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
