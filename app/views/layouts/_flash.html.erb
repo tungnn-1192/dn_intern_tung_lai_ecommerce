@@ -1,0 +1,9 @@
+<div class="sticky-top">
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>">
+      <div class="container">
+        <%= message.html_safe %>
+      </div>
+    </div>
+  <% end %>
+</div>

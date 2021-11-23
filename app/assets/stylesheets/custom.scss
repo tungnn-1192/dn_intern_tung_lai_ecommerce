@@ -40,7 +40,6 @@
   font-size: 2rem !important;
 }
 
-
 // categories section
 .categories__item {
   h5 {
@@ -85,6 +84,11 @@
   }
 }
 
-a, a:visited {
+a,
+a:visited {
   color: inherit;
+}
+
+.header__top__right__auth a {
+  display: inline;
 }

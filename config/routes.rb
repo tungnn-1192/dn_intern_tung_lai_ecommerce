@@ -4,5 +4,8 @@ Rails.application.routes.draw do
     get "/home", to: "static_pages#index"
 
     resources :carts, only: [:index]
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    get "/logout", to: "sessions#destroy"
   end
 end

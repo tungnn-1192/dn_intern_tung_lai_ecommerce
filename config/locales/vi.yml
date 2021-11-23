@@ -51,6 +51,17 @@ vi:
     messages:
       required: "không thể để trắng"
       confirmation: "không khớp với %{attribute}"
+  sessions:
+    new:
+      login: "Đăng nhập"
+      email: "Địa chỉ email"
+      password: "Mật khẩu"
+      register_now!: "Đăng ký ngay!"
+      new_user?: "Chưa có tài khoản?"
+  logged_in_as: "Đăng nhập thành công với %{name}"
+  email_password_invalid: "Địa chỉ email hoặc mật khẩu không đúng"
+  logged_out: "Đăng xuất thành công"
+
   activerecord:
     attributes:
       user:
