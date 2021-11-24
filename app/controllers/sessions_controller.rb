@@ -6,15 +6,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @current_user = User.find_by email: params[:user][:email], role: :user
-    if @current_user&.authenticate(params[:user][:password])
-      remember_user
-      flash[:success] = t("logged_in_as", name: @current_user.first_name)
-      redirect_to root_url
+    @current_user = User.find_by email: params[:user][:email]
+    if @current_user&.admin?
+      flash[:warning] = t("admins_not_allowed")
+      redirect_to action: :new
+    elsif @current_user&.authenticate(params[:user][:password])
+      handle_log_in
     else
       flash[:danger] = t("email_password_invalid")
-      use_layout_auth
-      render :new
+      redirect_to action: :new
     end
   end
 
@@ -28,6 +28,12 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def handle_log_in
+    remember_user
+    flash[:success] = t("logged_in_as", name: @current_user.first_name)
+    redirect_to root_url
+  end
 
   def remember_user
     session[:user_id] = @current_user.id
