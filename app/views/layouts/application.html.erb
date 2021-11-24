@@ -15,9 +15,16 @@
     <div id="preloder">
       <div class="loader"></div>
     </div>
+    <%= render "layouts/flash" %>
     <%= render "layouts/header" %>
-    <%= render "layouts/hero" %>
-    <%= yield %>
+    <% if @use_layout_auth %>
+      <div class="container my-3">
+        <%= yield %>
+      </div>
+    <% else %>
+      <%= render "layouts/hero" %>
+      <%= yield %>
+    <% end %>
     <%= render "layouts/footer" %>
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </body>

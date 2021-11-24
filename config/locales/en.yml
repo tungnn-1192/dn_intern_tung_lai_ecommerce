@@ -46,6 +46,16 @@ en:
       phone: "Phone: %{phone_number}"
       email: "Email: %{email}"
       about_us: "About Us"
+  sessions:
+    new:
+      login: "Login"
+      email: "Email address"
+      password: "Password"
+      register_now!: "Register now!"
+      new_user?: "New user?"
+  logged_in_as: "Logged in as %{name}"
+  email_password_invalid: "Either email or password is invalid"
+  logged_out: "Successfully logged out"
 
   activerecord:
     attributes:
@@ -80,3 +90,11 @@ en:
         quantity: "Quantity"
         current_price: "Product's price"
         password_confirmation: "Password confirmation"
+  number:
+    currency:
+      format:
+        unit: '<span class="currency-unit">$</span>'
+        delimiter: ','
+        separator: '.'
+        precision: 2
+        format: '%u %n'
