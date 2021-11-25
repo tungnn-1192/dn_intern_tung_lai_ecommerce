@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title yield :title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="/img/logo/logo.png" rel="icon">
+    <%= stylesheet_link_tag "admin", media: "all", "data-turbolinks-track": "reload" %>
+
+  </head>
+  <body id="page-top">
+    <div id="wrapper">
+      <%= render "admin/layouts/sidebar" %>
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <%= render "admin/layouts/topbar" %>
+          <div class="container-fluid" id="container-wrapper">
+            <%= render "admin/layouts/flash" %>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= javascript_pack_tag "admin", "data-turbolinks-track": "reload" %>
+  </body>
+</html>

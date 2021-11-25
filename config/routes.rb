@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    namespace :admin do
+      root "static_pages#index"
+      get "login" => "sessions#new"
+    end
     root "static_pages#index"
     get "/home", to: "static_pages#index"
 

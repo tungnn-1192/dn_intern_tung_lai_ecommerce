@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title yield :title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="/img/logo/logo.png" rel="icon">
+    <%= stylesheet_link_tag "admin", media: "all", "data-turbolinks-track": "reload" %>
+
+  </head>
+  <body class="bg-gradient-login">
+    <%= render "admin/layouts/flash" %>
+    <div class="container-login">
+      <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-12 col-md-9">
+          <div class="card shadow-sm my-5">
+            <div class="card-body p-0">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= javascript_pack_tag "admin", "data-turbolinks-track": "reload" %>
+  </body>
+</html>
