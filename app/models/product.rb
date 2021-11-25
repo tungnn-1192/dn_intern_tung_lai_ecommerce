@@ -22,4 +22,32 @@ class Product < ApplicationRecord
         (lambda do |id|
           select(:id, :name, :price, :inventory).find_by(id: id)
         end)
+  scope :search_by_range,
+        (lambda do |name, range|
+           where(name => (range[:min]..range[:max])) if range.present?
+         end)
+  scope :search_by_name,
+        (lambda do |keyword|
+           where(["name LIKE ?", "%#{keyword}%"]) if keyword.present?
+         end)
+  scope :search_by_category,
+        (lambda do |ids|
+          where(category_id: ids) if ids.present?
+        end)
+  scope :related_products,
+        (lambda do |product|
+           ids = if product.has_parent_category?
+                   product.parent_category.children.pluck(:id)
+                 else [product.category.id]
+                 end
+           where category_id: ids
+         end)
+
+  def parent_category
+    category.parent
+  end
+
+  def has_parent_category?
+    parent_category.present?
+  end
 end

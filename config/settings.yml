@@ -10,6 +10,8 @@ length:
   digit_9: 9
   featured_products:
     max: 12
+will_paginate:
+  per_page: 12
 seeder:
   description_paragraphs: 1
   count:

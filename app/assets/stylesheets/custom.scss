@@ -1,3 +1,5 @@
+@import "colors";
+
 .currency-unit {
   text-decoration: underline;
   margin-left: 0.25rem;
@@ -46,7 +48,7 @@
     a {
       text-transform: none;
       background: none;
-      color: #606060;
+      color: $color-gray;
     }
   }
 }
@@ -91,4 +93,51 @@ a:visited {
 
 .header__top__right__auth a {
   display: inline;
+}
+
+/**
+ * Product pages
+ */
+
+.price-range-wrap {
+  .range-slider .price-input input {
+    color: $color-black;
+    font-weight: normal;
+  }
+  .price-range .ui-slider-range {
+    background: $color-green;
+  }
+}
+.product__discount__item__text .product__item__price span {
+  text-decoration: none;
+  font-weight: inherit;
+}
+.product__item__text {
+  span {
+    text-decoration: underline;
+    margin-left: 0.5em;
+  }
+}
+.product__item {
+  cursor: pointer;
+}
+.price-range-wrap .range-slider .price-input {
+  input {
+    max-width: 48%;
+  }
+  &:after {
+    left: 40%;
+  }
+}
+.category-hierachy ul {
+  border-left: 3px solid;
+  padding-left: 18px;
+}
+
+/**
+  * paginate
+  */
+.page-item.active .page-link {
+  background-color: $color-green;
+  border-color: $color-gray;
 }

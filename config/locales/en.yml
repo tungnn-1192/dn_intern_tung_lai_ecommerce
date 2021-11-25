@@ -58,6 +58,24 @@ en:
   logged_out: "Successfully logged out"
   admins_not_allowed: "Sorry but admins are not allowed"
 
+  products:
+    index:
+      showing_html: "Showing <span>%{count} / %{total}</span> found products"
+      filter: "Filter products"
+      featured_products: "Featured Products"
+    show:
+      add_to_cart: "ADD TO CART"
+      share_on: "Share on"
+      description: "Product description"
+      related_products: "Related products"
+      products_left: "%{count} left"
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"
   activerecord:
     attributes:
       user:

@@ -47,6 +47,24 @@ vi:
       email: "Email: %{email}"
       about_us: "Về chúng tôi"
       subscribe: "Đăng ký"
+  products:
+    index:
+      showing_html: "Hiển thị <span>%{count} / %{total}</span> sản phẩm tìm thấy"
+      filter: "Lọc sản phẩm"
+      featured_products: "Sản phẩm nổi bật"
+    show:
+      add_to_cart: "THÊM VÀO GIỎ HÀNG"
+      share_on: "Chia sẻ trên"
+      description: "Mô tả sản phẩm"
+      related_products: "Sản phẩm tương tự"
+      products_left: "Còn lại %{count}"
+  views:
+    pagination:
+      first: "&laquo; Trang đầu"
+      last: "Trang cuối &raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"
   errors:
     messages:
       required: "không thể để trắng"
