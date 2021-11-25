@@ -21,7 +21,7 @@
       </ul>
     </div>
     <div class="featured__item__text">
-      <h6><a href="#"><%= product.name %></a></h6>
+      <h6><%= link_to product.name, product_path(product)%></h6>
       <h5><%= translate_price product.price %></h5>
     </div>
   </div>

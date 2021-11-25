@@ -7,4 +7,5 @@ class Category < ApplicationRecord
   belongs_to :parent, class_name: Category.name, optional: true
   has_many :products, dependent: :destroy
   scope :parent_categories, ->{where parent_id: nil}
+  scope :children_of, ->(id){where parent_id: id}
 end
