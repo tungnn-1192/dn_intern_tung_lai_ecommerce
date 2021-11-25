@@ -8,11 +8,11 @@
             <i class="fa fa-bars"></i>
             <span><%= t "labels.category.cat" %></span>
           </div>
-          <ul>
+          <ul class="category-hierachy">
             <% parent_categories.each do |category| %>
               <li class="toggle-down-wrapper">
                 <div>
-                  <h4 class="d-inline-block"><%= link_to category.title, "#" %></h4>
+                  <h4 class="d-inline-block"><%= link_to category.title, products_path(filters: {categories:{parents:[category.id.to_s]}}) %></h4>
                   <% if category.children.any? %>
                     <span class="fas fa-angle-down toggle-down-main clickable"></span>
                   <% end %>
@@ -21,7 +21,7 @@
                   <ul class="toggle-down-content border-success">
                     <% category.children.each do |subcategory| %>
                       <li>
-                        <h5><%= link_to subcategory.title, "#" %></h5>
+                        <h5><%= link_to subcategory.title, products_path(filters: {categories:{children:[subcategory.id.to_s]}}) %></h5>
                       </li>
                     <% end %>
                   </ul>
@@ -34,14 +34,13 @@
       <div class="col-lg-9">
         <div class="hero__search">
           <div class="hero__search__form">
-            <form action="#">
+            <%= form_for :filters, url: products_url, method: :get  do |f| %>
               <div class="hero__search__categories">
                 <%= t "labels.category.all" %>
-                <span class="arrow_carrot-down"></span>
               </div>
-              <input type="text" placeholder="<%= t ".what_do_you_need?" %>" />
-              <button type="submit" class="site-btn"><%= t ".search_btn_txt" %></button>
-            </form>
+              <%= f.text_field :name, placeholder: t(".what_do_you_need?") %>
+              <%= f.button t(".search_btn_txt"), name: nil, class: "site-btn"%>
+            <% end %>
           </div>
           <div class="hero__search__phone">
             <div class="hero__search__phone__icon">

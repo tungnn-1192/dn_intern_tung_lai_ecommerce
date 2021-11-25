@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
   end
 
   def categories_params_valid?
-    params.dig(:filters, :categories, :parents) &&
+    params.dig(:filters, :categories, :parents) ||
       params.dig(:filters, :categories, :children)
   end
 
