@@ -24,4 +24,17 @@ class User < ApplicationRecord
   enum role: {user: 0, admin: 1}
   enum gender: {female: false, male: true}
   has_many :orders, dependent: :destroy
+  class << self
+    def hidden_attributes
+      %w(password_digest remember_digest)
+    end
+
+    def shown_attributes
+      attribute_names.reject{|name| hidden_attributes.include? name}
+    end
+
+    def datetime_attributes
+      %w(birthday created_at updated_at)
+    end
+  end
 end

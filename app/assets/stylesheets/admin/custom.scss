@@ -1,4 +1,19 @@
+@import "admin/colors.scss";
+
 .sidebar .nav-item .collapse .collapse-inner {
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.table-tlshop {
+  width: 100%;
+}
+.table-tlshop td {
+  border-bottom: 2px solid $color-primary;
+}
+.table-tlshop tr td:last-child {
+  text-align: right;
+}
+.table-tlshop tr td[colspan="2"] {
+  border-bottom: 2px solid $color-primary;
+  text-align: center;
 }

@@ -36,7 +36,7 @@ en:
         dashboard: "Dashboard"
         pages: "Pages"
         logout: "Logout"
-        choose_language: "Choose your language"
+        orders: "Manage orders"
       topbar:
         choose_language: "Choose your language"
     sessions:
@@ -45,6 +45,20 @@ en:
         email: "Email"
         password: "Password"
         remember_me: "Remember me"
+    orders:
+      index:
+        update: "Update"
+        view_details: "Details"
+        order_id: "Order ID"
+        user_id: "User ID"
+        email: "User email"
+        total_price: "Total price"
+        status: "Order status"
+        created_at: "Date created"
+        updated_at: "Date last updated"
+        actions: "Actions"
+      show:
+        title: "Order details #%{id}"
     logged_in_as: "Logged in as %{name}"
     log_in_failed: "Either email or password is incorrect"
     users_not_allowed: "Sorry but only admins are allowed"

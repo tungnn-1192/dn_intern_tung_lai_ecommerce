@@ -1,0 +1,16 @@
+<%= render "order_status_mailer/style" %>
+<div class="container card">
+  <div class="card-body">
+    <h1>Your order status has changed.</h1>
+    <p>Hi <%= @order.user.first_name %>,</p>
+    <p>Your order status has changed from <span class="text-italic"><%= @previous_status %></span> to <span class="text-emphasis"><%= @order.status%></span></p>
+    <p>Below is the order details:</p>
+    <h2>Order summary</h2>
+    <%= render "admin/orders/order", order: @order %>
+    <h2>Ordered products</h2>
+    <%= render "admin/orders/order_items", order_items: @order.order_items %>
+
+    <p class="text-italic text-right">Happy shopping!</p>
+  </div>
+</div>
+<%= render "order_status_mailer/footer" %>

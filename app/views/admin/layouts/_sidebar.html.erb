@@ -18,6 +18,13 @@
     <%= t ".pages" %>
   </div>
   <li class="nav-item">
+    <%= link_to admin_orders_path, class: "nav-link" do %>
+      <i class="fab fa-fw fa-wpforms"></i>
+      <span><%= t ".orders" %></span>
+    <% end %>
+  </li>
+  <hr class="sidebar-divider">
+  <li class="nav-item">
     <%= link_to admin_logout_path, class: "nav-link" do %>
       <i class="fas fa-sign-out-alt"></i>
       <span><%= t ".logout" %></span>

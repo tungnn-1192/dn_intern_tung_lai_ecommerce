@@ -1,0 +1,48 @@
+<table class="line-height-1-5 table-tlshop">
+  <tbody>
+    <tr>
+      <td>Order ID:</td>
+      <td><%= @order.id %></td>
+    </tr>
+    <tr>
+      <td>Status:</td>
+      <td><%= @order.status %></td>
+    </tr>
+    <tr>
+      <td>Date created:</td>
+      <td><%= l @order.created_at, format: :short %></td>
+    </tr>
+    <tr>
+      <td>Date last updated:</td>
+      <td><%= l @order.updated_at, format: :short %></td>
+    </tr>
+    <tr>
+      <td>Total price:</td>
+      <td><%= translate_price @order.total_price %></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="text-center">
+        <h2>Ordered products:</h2>
+      </td>
+    </tr>
+    <% @order.order_items.each do |order_item|%>
+      <tr>
+        <td colspan="2" class="text-center">
+          <h3><%= order_item.product.name %></h3>
+        </td>
+      </tr>
+      <tr>
+        <td>Quantity:</td>
+        <td><%= order_item.quantity %></td>
+      </tr>
+      <tr>
+        <td>Current price:</td>
+        <td><%= translate_price order_item.current_price %></td>
+      </tr>
+      <tr>
+        <td>Subtotal:</td>
+        <td><%= translate_price(order_item.quantity * order_item.current_price) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

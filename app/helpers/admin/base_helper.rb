@@ -4,6 +4,11 @@ module Admin::BaseHelper
     page_title.empty? ? base_title : "#{page_title} | #{base_title}"
   end
 
+  def translate_price price
+    price /= Settings.rates_to.usd if I18n.locale == :en
+    number_to_currency price
+  end
+
   def current_user
     return nil if (user_id = session[:admin_id]).nil?
 
