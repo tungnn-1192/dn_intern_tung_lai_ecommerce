@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     get "/logout", to: "sessions#destroy"
 
-    resources :products, only: [:index]
+    resources :products, only: %i(index show)
     resources :carts, except: %i(new show edit)
   end
 end

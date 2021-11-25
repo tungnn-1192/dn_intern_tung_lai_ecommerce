@@ -4,10 +4,6 @@ module ApplicationHelper
     page_title.empty? ? base_title : "#{page_title} | #{base_title}"
   end
 
-  def print_price price
-    number_with_delimiter price, delimiter: "."
-  end
-
   def translate_price price
     price /= Settings.rates_to.usd if I18n.locale == :en
     number_to_currency price

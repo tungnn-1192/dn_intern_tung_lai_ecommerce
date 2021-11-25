@@ -106,6 +106,7 @@ vi:
   email_password_invalid: "Địa chỉ email hoặc mật khẩu không đúng"
   logged_out: "Đăng xuất thành công"
   admins_not_allowed: "Xin lỗi bạn, người quản trị không thể truy cập tính năng này"
+  product_not_found: "Không tìm thấy sản phẩm"
 
   activerecord:
     attributes:

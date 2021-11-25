@@ -83,6 +83,7 @@ en:
   email_password_invalid: "Either email or password is invalid"
   logged_out: "Successfully logged out"
   admins_not_allowed: "Sorry but admins are not allowed"
+  product_not_found: "Product not found"
 
   products:
     index:
