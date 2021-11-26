@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  enum status: {pending: 0, rejected: 1, cancled: 2,
+  enum status: {pending: 0, rejected: 1, canceled: 2,
                 delivering: 3, delivered: 4}
 
   belongs_to :user
@@ -15,20 +15,16 @@ class Order < ApplicationRecord
   end
 
   class << self
-    def hidden_attributes
-      %w(user_id)
-    end
-
-    def shown_attributes
-      attribute_names.reject{|name| hidden_attributes.include? name}
-    end
-
     def datetime_attributes
       %w(created_at updated_at)
     end
 
     def currency_attributes
       %w(total_price)
+    end
+
+    def human_attribute_statuses
+      statuses.map{|k, v| [Order.humanize_enum(:status, k), v]}
     end
   end
 end

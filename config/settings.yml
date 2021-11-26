@@ -45,3 +45,5 @@ languages:
   en: "English"
 rates_to:
   usd: 22653.5
+digit:
+  zero: 0

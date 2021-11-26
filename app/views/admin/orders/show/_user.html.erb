@@ -1,0 +1,12 @@
+<table class="table line-height-1-5 table-tlshop">
+  <tbody>
+    <% shown_attributes(User).each do |name| %>
+      <tr>
+        <td><%= User.human_attribute_name name %></td>
+        <td>
+          <%= render_show_user user, name %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

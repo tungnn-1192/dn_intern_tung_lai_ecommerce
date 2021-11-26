@@ -24,4 +24,10 @@ class User < ApplicationRecord
   enum role: {user: 0, admin: 1}
   enum gender: {female: false, male: true}
   has_many :orders, dependent: :destroy
+
+  class << self
+    def datetime_attributes
+      %w(birthday created_at updated_at)
+    end
+  end
 end

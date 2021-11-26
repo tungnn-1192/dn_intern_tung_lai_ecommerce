@@ -1,0 +1,19 @@
+<table class="table line-height-1-5 table-tlshop">
+  <tbody>
+    <% order_items.each do |order_item|%>
+      <tr>
+        <td colspan="2" class="text-center">
+          <h3><%= order_item.product.name %></h3>
+        </td>
+      </tr>
+      <% shown_attributes(OrderItem).each do |name| %>
+        <tr>
+          <td><%= OrderItem.human_attribute_name name %></td>
+          <td>
+            <%= render_show_order_item order_item, name %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
