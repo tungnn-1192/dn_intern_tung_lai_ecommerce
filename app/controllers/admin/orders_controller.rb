@@ -7,8 +7,10 @@ class Admin::OrdersController < Admin::BaseController
   def show; end
 
   def update
+    previous_status = @order.status
     if @order.update_attribute :status, Order.statuses.key(params[:status].to_i)
       flash[:success] = t("admin.status_updated")
+      OrderStatusMailer.status_changed(@order, previous_status).deliver_later
     else
       flash[:danger] = t("admin.status_update_failed")
     end
