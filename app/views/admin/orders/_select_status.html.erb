@@ -1,0 +1,7 @@
+<select class="form-select select-status">
+  <option selected value="<%= order_statuses[order.status] %>"><%= order.status%></option>
+  <% order_statuses.each do |name, value| %>
+    <% next if name == order.status %>
+    <option value="<%= value %>"><%= name %></option>
+  <% end %>
+</select>

@@ -136,6 +136,13 @@ en:
   attributes:
     created_at: "Date created"
     updated_at: "Date last updated"
+  order_status_mailer:
+    status_changed:
+      subject: "Your order #%{id} has changed status to \"%{status}\""
+      greeting: "Hi %{name}"
+      summary_html: "Your order status has changed from <span class=\"text-italic\">%{prev}</span> to <span class=\"text-emphasis\">%{current}</span>"
+      details_below: "Below is the order details"
+      happy_shopping!: "Happy shopping!"
   activerecord:
     models:
       category: "Category"

@@ -1,0 +1,16 @@
+<%= render "order_status_mailer/style" %>
+<div class="container card">
+  <div class="card-body">
+    <h1><%= t ".subject" %>.</h1>
+    <p><%= t ".greeting", name: @order.user.first_name %>,</p>
+    <p><%= t ".summary_html", prev: @previous_status, current: @order.status %></p>
+    <p><%= t ".details_below" %>:</p>
+    <h2><%= Order.model_name.human %></h2>
+    <%= render "admin/orders/show/order", order: @order %>
+    <h2><%= OrderItem.model_name.human %></h2>
+    <%= render "admin/orders/show/order_items", order_items: @order.order_items %>
+
+    <p class="text-italic text-right"><%= t ".happy_shopping!" %></p>
+  </div>
+</div>
+<%= render "order_status_mailer/footer" %>

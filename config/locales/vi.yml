@@ -144,6 +144,13 @@ vi:
   attributes:
     created_at: "Ngày tạo"
     updated_at: "Ngày cập nhật cuối"
+  order_status_mailer:
+    status_changed:
+      subject: "Đơn hàng của bạn đã thay đổi trạng thái"
+      greeting: "Xin chào %{name}"
+      summary_html: "Đơn hàng của bạn đã thay đổi trạng thái từ <span class=\"text-italic\">%{prev}</span> sang <span class=\"text-emphasis\">%{current}</span>"
+      details_below: "Sau đây là thông tin chi tiết đơn hàng này"
+      happy_shopping!: "Chúc bạn mua sắm vui vẻ!"
   activerecord:
     models:
       category: "Loại sản phẩm"
