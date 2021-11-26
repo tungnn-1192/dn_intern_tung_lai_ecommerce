@@ -11,11 +11,7 @@
       <div class="flag__wrapper"><img src=<%= "/img/language-#{I18n.locale}.png" %> alt="" /></div>
       <div><%= Settings.languages[I18n.locale] %></div>
       <span class="arrow_carrot-down"></span>
-      <ul>
-        <% I18n.available_locales.each do |lang| %>
-          <li><a href="<%= change_path_locale request.path, lang %>"><%= Settings.languages[lang] %></a></li>
-        <% end %>
-      </ul>
+      <%= render "shared/list_languages" %>
     </div>
   </div>
   <div class="header__top__right__auth">
@@ -69,11 +65,7 @@
               <div class="flag__wrapper"><img src=<%= "/img/language-#{I18n.locale}.png" %> alt="" /></div>
               <div><%= Settings.languages[I18n.locale] %></div>
               <span class="arrow_carrot-down"></span>
-              <ul>
-                <% I18n.available_locales.each do |lang| %>
-                  <li><a href="<%= change_path_locale request.path, lang %>"><%= Settings.languages[lang] %></a></li>
-                <% end %>
-              </ul>
+              <%= render "shared/list_languages" %>
             </div>
             <div class="header__top__right__auth">
               <% if current_user.present? %>
