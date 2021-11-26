@@ -50,9 +50,14 @@ vi:
         update: "Sửa"
         view_details: "Xem"
         actions: "Hành động"
+      show:
+        title: "Chi tiết đơn hàng #%{id}"
+    order_not_found: "Không tìm thấy đơn hàng có ID #%{id}"
     logged_in_as: "Đăng nhập thành công dưới tên %{name}"
     log_in_failed: "Địa chỉ email hoặc mật khẩu không đúng"
     users_not_allowed: "Xin lỗi bạn, chỉ có admin mới có quyền truy cập tính năng này"
+    status_updated: "Cập nhật trạng thái đơn hàng thành công"
+    status_update_failed: "Cập nhật trạng thái đơn hàng thất bại"
   layouts:
     header:
       home: "Trang chủ"

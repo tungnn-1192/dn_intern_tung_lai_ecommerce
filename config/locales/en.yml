@@ -50,6 +50,11 @@ en:
         update: "Update"
         view_details: "Details"
         actions: "Actions"
+      show:
+        title: "Order details #%{id}"
+    order_not_found: "Could not find order with ID #%{id}"
+    status_updated: "Order status updated"
+    status_update_failed: "Order status could not be updated"
     logged_in_as: "Logged in as %{name}"
     log_in_failed: "Either email or password is incorrect"
     users_not_allowed: "Sorry but only admins are allowed"

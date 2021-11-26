@@ -1,0 +1,27 @@
+<table class="table line-height-1-5 table-tlshop">
+  <tbody>
+    <% order_items.each do |order_item|%>
+      <tr>
+        <td colspan="2" class="text-center">
+          <h3><%= order_item.product.name %></h3>
+        </td>
+      </tr>
+      <% OrderItem.shown_attributes.each do |name| %>
+        <% if name != "product_id" %>
+          <tr>
+            <td><%= OrderItem.human_attribute_name name %></td>
+            <td>
+              <%= if OrderItem.datetime_attributes.include?(name)
+                    l order_item.send(name), format: :long
+                  elsif OrderItem.currency_attributes.include?(name)
+                    translate_price order_item.send(name)
+                  else
+                    order_item.send(name)
+                  end %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>s
+    <% end %>s
+  </tbody>
+</table>

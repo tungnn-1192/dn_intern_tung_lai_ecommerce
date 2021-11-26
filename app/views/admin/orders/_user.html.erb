@@ -1,0 +1,16 @@
+<table class="table line-height-1-5 table-tlshop">
+  <tbody>
+    <% User.shown_attributes.each do |name| %>
+      <tr>
+        <td><%= User.human_attribute_name name %></td>
+        <td>
+          <%= if User.datetime_attributes.include?(name)
+                l user.send(name), format: :long
+              else
+                user.send(name)
+              end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
