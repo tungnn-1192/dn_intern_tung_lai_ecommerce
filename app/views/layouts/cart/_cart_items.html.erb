@@ -14,9 +14,13 @@
       <td class="shoping__cart__quantity">
         <div class="quantity">
           <div class="pro-qty">
-            <span class="dec qtybtn">-</span>
+            <span class="dec qtybtn">
+              <%= link_to "-", cart_path(id: item[1][:id]), method: :patch, remote: true %>
+            </span>
             <input type="text" readonly="readonly" value=<%= item[0][1] %>>
-            <span class="inc qtybtn">+</span>
+            <span class="inc qtybtn">
+              <%= link_to "+", carts_path(id: item[1][:id]), method: :post, remote: true %>
+            </span>
           </div>
         </div>
       </td>
