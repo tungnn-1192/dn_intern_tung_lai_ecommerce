@@ -1,9 +1,5 @@
-<% if @result == :exceeded %>
-  $(".pending__popup").html("<%= j (render partial: "shared/modal", locals: {status: :exceeded}) %>")
-  $("#exampleModalCenter").modal("show")
-<% else %>
-  $(".cart__items").html("<%= j (render partial: "layouts/cart/cart_items") %>")
-  $("#cart__subtotal").html("<%= j (translate_price subtotal) %>")
-  $("#shopping__bag__count").html("<%= j (cart_count) %>")
-  $("#shopping__bag__total").html("<%= j (translate_price subtotal) %>")
-<% end %>
+<% msg = @result == :exceeded ? t("cart.modal.exceeded") : t("cart.modal.added") %>$(".pending__popup").html("<%= j (render partial: "shared/modal", locals: {status: @result, msg: msg}) %>")
+$("#exampleModalCenter").modal("show")
+$(".cart__items").html("<%= j (render partial: "layouts/cart/cart_items") %>")
+$("#cart__subtotal").html("<%= j (translate_price subtotal) %>")
+$("#shopping__bag__count").html("<%= j (cart_count) %>")

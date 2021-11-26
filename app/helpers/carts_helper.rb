@@ -1,13 +1,12 @@
 module CartsHelper
-  # fake the cart only once since the session start, only for now
-  def fake_cart
-    return if session[:cart] == {} || session[:cart].present?
+  # init cart only once
+  def init_cart
+    session[:cart] ||= {}
+  end
 
+  # wipe out all data in cart when logged out
+  def empty_cart
     session[:cart] = {}
-    session[:cart][1.to_s] = 1
-    session[:cart][2.to_s] = 2
-    session[:cart][3.to_s] = 4
-    session[:cart][4.to_s] = 3
   end
 
   # number of available items in cart
@@ -60,6 +59,7 @@ module CartsHelper
     return :exceeded if qty_exceeds_range params[:id], possible_qty
 
     session[:cart][params[:id]] = possible_qty
+    :added
   end
 
   # subtract item quantity from cart by 1

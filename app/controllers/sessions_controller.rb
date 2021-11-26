@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   before_action :use_layout_auth, only: [:new]
+  after_action :empty_cart, only: [:destroy]
 
   def new
     redirect_to root_url if current_user.present?

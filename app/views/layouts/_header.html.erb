@@ -21,7 +21,7 @@
   <div class="header__top__right__auth">
     <% if current_user.present? %>
       <%= link_to "#" do %>
-        <i class="fa fa-user"></i><%= current_user.first_name %>, <%= link_to "Đăng xuất", logout_path %>
+        <i class="fa fa-user"></i><%= current_user.first_name %>, <%= link_to t(".logout"), logout_path %>
       <% end %>
     <% else %>
       <%= link_to login_path do %>
@@ -31,7 +31,7 @@
   </div>
   <nav class="humberger__menu__nav mobile-menu">
     <ul>
-      <li class="active"><%= link_to t(".home"), root_path %></a></li>
+      <li class="active"><%= link_to t(".home"), root_path %></li>
       <li><%= link_to t(".shop"), products_path %></li>
       <li>
         <a><%= t ".order" %></a>
@@ -40,7 +40,6 @@
           <li><%= link_to t(".checkout"), "#" %></li>
         </ul>
       </li>
-      <li><%= link_to t(".contact"), "#" %></li>
     </ul>
   </nav>
   <div id="mobile-menu-wrap"></div>
@@ -79,7 +78,7 @@
             <div class="header__top__right__auth">
               <% if current_user.present? %>
                 <%= link_to "#" do %>
-                  <i class="fa fa-user"></i><%= current_user.first_name %>, <%= link_to "Đăng xuất", logout_path %>
+                  <i class="fa fa-user"></i><%= current_user.first_name %>, <%= link_to t(".logout"), logout_path %>
                 <% end %>
               <% else %>
                 <%= link_to login_path do %>
@@ -104,16 +103,15 @@
       <div class="col-lg-6">
         <nav class="header__menu">
           <ul>
-            <li class="active"><%= link_to t(".home"), root_path %></li>
+            <li><%= link_to t(".home"), root_path %></li>
             <li><%= link_to t(".shop"), products_path %></li>
             <li>
-              <a><%= t ".order" %></a>
+              <a href="#"><%= t ".order" %></a>
               <ul class="header__menu__dropdown">
                 <li><%= link_to t(".cart"), carts_path %></li>
                 <li><%= link_to t(".checkout"), "#" %></li>
               </ul>
             </li>
-            <li><%= link_to t(".contact"), "#" %></li>
           </ul>
         </nav>
       </div>
@@ -128,15 +126,15 @@
             </li>
           </ul>
           <div class="header__cart__price">
-            <%= t ".total" %>
-            <span><%= translate_price subtotal %></span>
+            <%= t "layouts.header.total" %>
+            <span id="shopping__bag__total"><%= translate_price subtotal %></span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="humberger__open">
-    <i class="fa fa-bars"></i>
+    <div class="humberger__open">
+      <i class="fa fa-bars"></i>
+    </div>
   </div>
 </header>
 <!-- Header Section End -->
