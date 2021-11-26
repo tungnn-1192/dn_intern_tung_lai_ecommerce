@@ -8,6 +8,7 @@ class Order < ApplicationRecord
   scope :order_by_status, ->{order :status}
   scope :order_by_last_updated, ->{order updated_at: :desc}
   delegate :email, to: :user, prefix: :user
+  accepts_nested_attributes_for :order_items
 
   def status_value
     Order.statuses[status]

@@ -1,9 +1,7 @@
-<% if @result == :pending_remove %>
-  $(".pending__popup").html("<%= j (render partial: "shared/modal", locals: {status: :pending_remove, msg: t("cart.modal.pending_remove")}) %>")
-  $("#exampleModalCenter").modal("show")
-<% else %>
-  $(".cart__items").html("<%= j (render partial: "layouts/cart/cart_items") %>")
-  $("#cart__subtotal").html("<%= j (translate_price subtotal) %>")
-  $("#shopping__bag__count").html("<%= j (cart_count) %>")
-  $("#shopping__bag__total").html("<%= j (translate_price subtotal) %>")
-<% end %>
+<% msg = t("cart.modal.#{@result}") %>
+$(".pending__popup").html("<%= j (render partial: "shared/modal", locals: {status: @result, msg: msg}) %>")
+$("#exampleModalCenter").modal("show")
+$(".cart__items").html("<%= j (render partial: "layouts/cart/cart_items") %>")
+$("#cart__subtotal").html("<%= j (translate_price subtotal) %>")
+$("#shopping__bag__count").html("<%= j (cart_count) %>")
+$("#shopping__bag__total").html("<%= j (translate_price subtotal) %>")

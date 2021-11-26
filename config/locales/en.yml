@@ -20,10 +20,13 @@ en:
     qty: "Quantity"
     total: "Total"
     cart_total: "Cart Total"
+    buy_more: "Please add some products to the cart first!"
+    please_login: "Please login before checking out!"
     modal:
       header: "Notification"
       exceeded: "The stock limit has been reached!"
       added: "Added to cart!"
+      removed: "Removed from cart!"
       pending_remove: "Are you sure you want to remove this product from your cart?"
       btn_close: "Close"
       btn_confirm: "OK"
@@ -55,6 +58,20 @@ en:
     logged_in_as: "Logged in as %{name}"
     log_in_failed: "Either email or password is incorrect"
     users_not_allowed: "Sorry but only admins are allowed"
+  order:
+    page_title: "Checkout"
+    label_html: <p>%{field}<span>*</span></p>
+    bill_title: "Billing Details"
+    order_title: "Your Order"
+    product: "Product"
+    total: "Total"
+    subtotal: "Total"
+    succeeded: "Order successful!"
+    unvalid_qty: "Error! Please check your cart and order again."
+    place_order: "Place Order"
+    unvalid_product: "Product %{products} is currently unavailable. Please recheck cart and re-order"
+    unvalid_quantities: "Products %{products} are out of stock!"
+    error: "Failed to create order! Please check cart and try again."
   layouts:
     header:
       home: "Home"

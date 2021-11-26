@@ -39,7 +39,7 @@ module CartsHelper
     products_contents = {}
     session[:cart].each do |pair|
       product = basic_product_info pair[0]
-      if product
+      if product && product[:inventory].positive?
         session[:cart][pair[0]] = available_qty pair[1], product[:inventory]
         products_contents[pair] = product
       else
@@ -69,11 +69,17 @@ module CartsHelper
     return :pending_remove if session[:cart][params[:id]] == 1
 
     session[:cart][params[:id]] -= 1
+    :removed
   end
 
   # remove item from cart
   def remove_item
     session[:cart].delete(params[:id]) if session[:cart][params[:id]]
+    :removed
+  end
+
+  def cart_is_empty?
+    cart_count.zero?
   end
 
   private

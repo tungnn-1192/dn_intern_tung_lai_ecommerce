@@ -1,15 +1,16 @@
 class OrderItem < ApplicationRecord
-  after_create :set_order_total_price
   before_save :set_current_price
-  validates :quantity, presence: true
+  after_save :update_product_inventory
+
+  validates :quantity, presence: true, numericality: {other_than: Settings.digit.zero}
 
   belongs_to :order
   belongs_to :product
 
   private
-  def set_order_total_price
-    order.total_price += current_price * quantity
-    order.save
+  def update_product_inventory
+    product.inventory -= quantity
+    product.save!
   end
 
   def set_current_price
