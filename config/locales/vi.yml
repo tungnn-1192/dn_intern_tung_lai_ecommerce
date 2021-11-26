@@ -36,7 +36,7 @@ vi:
         dashboard: "Bảng điều khiển"
         pages: "Trang"
         logout: "Đăng xuất"
-        choose_language: "Chọn ngôn ngữ của bạn"
+        orders: "Quản lý đơn hàng"
     topbar:
       choose_language: "Choose your language"
     sessions:
@@ -45,6 +45,11 @@ vi:
         email: "Địa chỉ email"
         password: "Mật khẩu"
         remember_me: "Ghi nhớ đăng nhập"
+    orders:
+      index:
+        update: "Sửa"
+        view_details: "Xem"
+        actions: "Hành động"
     logged_in_as: "Đăng nhập thành công dưới tên %{name}"
     log_in_failed: "Địa chỉ email hoặc mật khẩu không đúng"
     users_not_allowed: "Xin lỗi bạn, chỉ có admin mới có quyền truy cập tính năng này"

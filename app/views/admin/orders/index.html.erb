@@ -1,0 +1,58 @@
+<% provide :title, t("admin.layouts.sidebar.orders") %>
+<h1><%= t "admin.layouts.sidebar.orders" %></h1>
+<div class="row">
+  <div class="col-lg-12 mb-4">
+    <div class="card">
+      <div class="table-responsive">
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light text-center">
+            <tr>
+              <% Order.attribute_names.each do |name| %>
+                <th>
+                  <%= if name == "user_id"
+                        User.human_attribute_name "email"
+                      else
+                        Order.human_attribute_name name
+                      end
+                  %>
+                </th>
+              <% end %>
+              <th><%= t(".actions") %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @orders.each do |order| %>
+              <tr>
+                <% Order.attribute_names.each do |name| %>
+                  <td>
+                    <%= if name == "status"
+                          render "admin/orders/select_status", order: order
+                        elsif name == "user_id"
+                          order.user.email
+                        elsif Order.datetime_attributes.include?(name)
+                          l order.send(name), format: :long
+                        elsif Order.currency_attributes.include?(name)
+                          translate_price order.send(name)
+                        else
+                          order.send(name)
+                        end
+                    %>
+                  </td>
+                <% end %>
+                <td>
+                  <%= link_to t(".update"), "#", method: :put, class: "btn btn-primary btn-update disabled" %>
+                  <%= link_to t(".view_details"), "#", class: "btn btn-success" %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-7 offset-md-5">
+          <%= paginate @orders %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
