@@ -23,6 +23,7 @@ vi:
     modal:
       header: "Thông báo"
       exceeded: "Đã đạt đến giới hạn trong kho!"
+      added: "Đã thêm sản phẩm vào giỏ!"
       pending_remove: "Bạn có chắc chắn muốn xóa sản phẩm này ra khỏi giỏ hàng?"
       btn_close: "Đóng"
       btn_confirm: "Đồng ý"
@@ -39,6 +40,7 @@ vi:
       order: "Đơn hàng"
       contact: "Liên hệ"
       login: "Đăng nhập"
+      logout: "Đăng xuất"
       total: "tổng:"
       site_email: "admin@tlshop.example.com"
     hero:

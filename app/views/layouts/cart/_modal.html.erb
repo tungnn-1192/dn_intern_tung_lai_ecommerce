@@ -11,7 +11,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= msg %>
+        <% if status == :exceeded %>
+          <%= t "cart.modal.exceeded" %>
+        <% else %>
+          <%= t "cart.modal.pending_remove" %>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">

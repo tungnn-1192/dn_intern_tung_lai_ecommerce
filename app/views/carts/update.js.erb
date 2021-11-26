@@ -1,5 +1,5 @@
 <% if @result == :pending_remove %>
-  $(".pending__popup").html("<%= j (render partial: "shared/modal", locals: {status: :pending_remove}) %>")
+  $(".pending__popup").html("<%= j (render partial: "shared/modal", locals: {status: :pending_remove, msg: t("cart.modal.pending_remove")}) %>")
   $("#exampleModalCenter").modal("show")
 <% else %>
   $(".cart__items").html("<%= j (render partial: "layouts/cart/cart_items") %>")

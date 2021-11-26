@@ -23,6 +23,7 @@ en:
     modal:
       header: "Notification"
       exceeded: "The stock limit has been reached!"
+      added: "Added to cart!"
       pending_remove: "Are you sure you want to remove this product from your cart?"
       btn_close: "Close"
       btn_confirm: "OK"
@@ -39,6 +40,7 @@ en:
       order: "Order"
       contact: "Contact"
       login: "Login"
+      logout: "Logout"
       total: "total:"
       site_email: "admin@tlshop.example.com"
     hero:
