@@ -10,6 +10,7 @@ class Product < ApplicationRecord
   validates :unit, length: {maximum: Settings.length.digit_50}
 
   belongs_to :category
+  delegate :title, to: :category, prefix: :category
   scope :featured_products,
         (lambda do |max|
           order(rating: :desc).limit(max)
