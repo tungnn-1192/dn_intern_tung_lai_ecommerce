@@ -16,6 +16,7 @@ gem "strings-case"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "webpacker", "~> 5.0"
+gem "faker"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -29,7 +30,6 @@ group :development, :test do
   gem "rubocop-rails", "~> 2.3.2", require: false
 
   # db: mysql2
-  gem "faker"
   gem "mysql2"
 end
 

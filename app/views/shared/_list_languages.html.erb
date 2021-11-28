@@ -1,5 +1,5 @@
 <ul class="list-languages">
   <% I18n.available_locales.each do |lang| %>
-    <a class="dropdown-item" href="<%= change_path_locale request.path, lang %>"><%= Settings.languages[lang] %></a>
+    <li><a class="dropdown-item" href="<%= change_path_locale request.path, lang %>"><%= Settings.languages[lang] %></a></li>
   <% end %>
 </ul>
