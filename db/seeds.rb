@@ -7,7 +7,7 @@ class Seeder
     def sym_to_name sym
       sym = sym.to_s
       sym[0] = sym[0].upcase
-      sym.sub "_", " "
+      sym.sub! "_", " "
       sym
     end
 
@@ -118,7 +118,7 @@ class Seeder
     end
 
     def seed_order_items order
-      offset = rand(User.count)
+      offset = rand(User.where(role: :user).count)
       order.order_items.create product: Product.offset(offset).first,
                               quantity: Faker::Number.between(
                                 from: Settings.seeder.digit.quantity.min,
@@ -127,7 +127,7 @@ class Seeder
     end
 
     def seed_orders_order_items
-      User.find_each do |user|
+      User.where(role: :user).find_each do |user|
         orders_count.times do
           order = user.orders.create
           order_items_count.times do
