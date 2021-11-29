@@ -20,10 +20,13 @@ vi:
     qty: "Số lượng"
     total: "Tổng"
     cart_total: "Giá trị giỏ hàng"
+    buy_more: "Hãy thêm sản phẩm vào giỏ trước nhé!"
+    please_login: "Hãy đăng nhập trước khi thanh toán nhé!"
     modal:
       header: "Thông báo"
       exceeded: "Đã đạt đến giới hạn trong kho!"
       added: "Đã thêm sản phẩm vào giỏ!"
+      removed: "Đã xóa sản phẩm khỏi giỏ!"
       pending_remove: "Bạn có chắc chắn muốn xóa sản phẩm này ra khỏi giỏ hàng?"
       btn_close: "Đóng"
       btn_confirm: "Đồng ý"
@@ -55,6 +58,21 @@ vi:
     logged_in_as: "Đăng nhập thành công dưới tên %{name}"
     log_in_failed: "Địa chỉ email hoặc mật khẩu không đúng"
     users_not_allowed: "Xin lỗi bạn, chỉ có admin mới có quyền truy cập tính năng này"
+  order:
+    page_title: "Đặt hàng"
+    label_html: <p>%{field}<span>*</span></p>
+    bill_title: "Chi tiết đơn hàng"
+    order_title: "Đơn hàng của bạn"
+    product: "Sản phẩm"
+    total: "Tổng tiền"
+    subtotal: "Giá trị đơn hàng"
+    succeeded: "Đặt hàng thành công!"
+    unvalid_qty: "Lỗi! Vui lòng kiểm tra giỏ hàng và đặt hàng lại."
+    place_order: "Đặt Hàng"
+    unvalid_product: "Sản phẩm %{products} hiện không khả dụng."
+    unvalid_quantities: "Các sản phẩm %{products} có số lượng vượt quá tồn kho!"
+    error: "Đặt hàng không thành công! Vui lòng kiểm tra lại giỏ hàng."
+
   layouts:
     header:
       home: "Trang chủ"

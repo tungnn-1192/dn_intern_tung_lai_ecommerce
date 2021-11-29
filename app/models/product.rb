@@ -43,6 +43,10 @@ class Product < ApplicationRecord
                  end
            where category_id: ids
          end)
+  scope :update_inventory,
+        (lambda do |id, inventory|
+          find_by(id: id).update_column(:inventory, inventory)
+        end)
 
   def parent_category
     category.parent
