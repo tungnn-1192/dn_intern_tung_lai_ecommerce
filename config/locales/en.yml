@@ -50,11 +50,18 @@ en:
         password: "Password"
         remember_me: "Remember me"
     orders:
+      index:
+        update: "Update"
+        view_details: "Details"
+        actions: "Actions"
       order:
         update: "Update"
         view_details: "Details"
-      index:
-        actions: "Actions"
+      show:
+        title: "Order details #%{id}"
+    order_not_found: "Could not find order with ID #%{id}"
+    status_updated: "Order status updated"
+    status_update_failed: "Order status could not be updated"
     logged_in_as: "Logged in as %{name}"
     log_in_failed: "Either email or password is incorrect"
     users_not_allowed: "Sorry but only admins are allowed"
@@ -126,7 +133,16 @@ en:
       previous: "&lsaquo;"
       next: "&rsaquo;"
       truncate: "&hellip;"
+  attributes:
+    created_at: "Date created"
+    updated_at: "Date last updated"
   activerecord:
+    models:
+      category: "Category"
+      order_item: "Ordered products"
+      order: "Order summary"
+      product: "Product"
+      User: "User"
     attributes:
       user:
         email: "Email address"
@@ -137,7 +153,14 @@ en:
         birthday: "Birthday"
         gender: "Gender"
         role: "User role"
+        genders:
+          male: "Male"
+          female: "Female"
+        roles:
+          user: "User"
+          admin: "Administrator"
         password: "Password"
+        password_confirmation: "Password confirmation"
       product:
         category: "Category"
         name: "Name"
@@ -153,6 +176,12 @@ en:
         user: "Ordering user"
         total_price: "Total price"
         status: "Order status"
+        statuses:
+          pending: "pending"
+          rejected: "rejected"
+          canceled: "canceled"
+          delivering: "delivering"
+          delivered: "delivered"
       order_item:
         order: "Order"
         product: "Product"

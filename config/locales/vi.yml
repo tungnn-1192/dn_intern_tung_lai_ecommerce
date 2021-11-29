@@ -50,11 +50,18 @@ vi:
         password: "Mật khẩu"
         remember_me: "Ghi nhớ đăng nhập"
     orders:
+      index:
+        update: "Sửa"
+        view_details: "Xem"
+        actions: "Hành động"
       order:
         update: "Sửa"
         view_details: "Xem"
-      index:
-        actions: "Hành động"
+      show:
+        title: "Chi tiết đơn hàng #%{id}"
+    order_not_found: "Không tìm thấy đơn hàng có ID #%{id}"
+    status_updated: "Cập nhật trạng thái đơn hàng thành công"
+    status_update_failed: "Cập nhật trạng thái đơn hàng thất bại"
     logged_in_as: "Đăng nhập thành công dưới tên %{name}"
     log_in_failed: "Địa chỉ email hoặc mật khẩu không đúng"
     users_not_allowed: "Xin lỗi bạn, chỉ có admin mới có quyền truy cập tính năng này"
@@ -73,6 +80,8 @@ vi:
     unvalid_quantities: "Các sản phẩm %{products} có số lượng vượt quá tồn kho!"
     error: "Đặt hàng không thành công! Vui lòng kiểm tra lại giỏ hàng."
 
+    status_updated: "Cập nhật trạng thái đơn hàng thành công"
+    status_update_failed: "Cập nhật trạng thái đơn hàng thất bại"
   layouts:
     header:
       home: "Trang chủ"
@@ -132,7 +141,16 @@ vi:
   admins_not_allowed: "Xin lỗi bạn, người quản trị không thể truy cập tính năng này"
   product_not_found: "Không tìm thấy sản phẩm"
 
+  attributes:
+    created_at: "Ngày tạo"
+    updated_at: "Ngày cập nhật cuối"
   activerecord:
+    models:
+      category: "Loại sản phẩm"
+      order_item: "Các sản phẩm đã đặt"
+      order: "Tóm tắt đơn hàng"
+      product: "Sản phẩm"
+      user: "Người dùng"
     attributes:
       user:
         email: "Địa chỉ email"
@@ -143,6 +161,12 @@ vi:
         birthday: "Ngày sinh"
         gender: "Giới tính"
         role: "Vai trò"
+        genders:
+          male: "Nam"
+          female: "Nữ"
+        roles:
+          user: "Người dùng"
+          admin: "Người quản trị"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
       product:
@@ -160,6 +184,12 @@ vi:
         user: "Người đặt hàng"
         total_price: "Giá tổng cộng"
         status: "Trạng thái đơn hàng"
+        statuses:
+          pending: "đang xác nhận"
+          rejected: "đã từ chối"
+          canceled: "đã hủy"
+          delivering: "đang giao"
+          delivered: "đã giao"
       order_item:
         order: "Đơn hàng"
         product: "Sản phẩm"

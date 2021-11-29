@@ -1,11 +1,11 @@
 <tr>
   <% Order.attribute_names.each do |name| %>
     <td>
-      <%= render_order_attribute order, name %>
+      <%= render_index_order order, name %>
     </td>
   <% end %>
   <td>
-    <%= link_to t(".update"), "#", method: :put, class: "btn btn-primary btn-update disabled" %>
-    <%= link_to t(".view_details"), "#", class: "btn btn-success" %>
+    <%= link_to t(".update"), admin_order_path(order), method: :put, class: "btn btn-primary btn-update disabled" %>
+    <%= link_to t(".view_details"), admin_order_path(order), class: "btn btn-success" %>
   </td>
 </tr>

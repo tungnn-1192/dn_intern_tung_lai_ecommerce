@@ -11,6 +11,7 @@ import "channels";
 import "ruang-admin/vendor/bootstrap/js/bootstrap.bundle.min.js";
 import "ruang-admin/vendor/jquery-easing/jquery.easing.min.js";
 import "ruang-admin/js/ruang-admin.min.js";
+import "ruang-admin/custom.js";
 
 Rails.start();
 // Turbolinks.start();
