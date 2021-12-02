@@ -26,6 +26,9 @@ group :development, :test do
   gem "simplecov-rcov"
   gem "simplecov"
 
+  gem "shoulda-matchers", "~> 5.0"
+  gem "factory_bot_rails"
+
   # rubocop
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
