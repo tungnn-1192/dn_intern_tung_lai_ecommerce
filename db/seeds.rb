@@ -100,7 +100,16 @@ class Seeder
     end
 
     def seed_admins
-      User.create! Settings.seeder.admin.to_hash
+      User.create! email: "nguyen.nhat.tung@sun-asterisk.com",
+          first_name: "Tùng",
+          last_name: "Nguyễn Nhật",
+          telephone: "0935 805 404",
+          address: "K81/01 Ngô Thì Nhậm",
+          birthday: "2000-03-23",
+          gender: "male",
+          role: "admin",
+          password: "12345678",
+          password_confirmation: "12345678"
     end
 
     def orders_count
