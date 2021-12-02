@@ -40,14 +40,6 @@ seeder:
       min: 1
       max: 5
   unit: "Piece"
-languages:
-  vi: "Tiếng Việt"
-  en: "English"
-rates_to:
-  usd: 22653.5
-digit:
-  zero: 0
-seeder:
   password: "12345678"
   admin:
     email: "nguyen.nhat.tung@sun-asterisk.com"
@@ -60,5 +52,12 @@ seeder:
     role: "admin"
     password: "12345678"
     password_confirmation: "12345678"
+languages:
+  vi: "Tiếng Việt"
+  en: "English"
+rates_to:
+  usd: 22653.5
+digit:
+  zero: 0
 mailer:
   from: "noreply@tlshop.com"
