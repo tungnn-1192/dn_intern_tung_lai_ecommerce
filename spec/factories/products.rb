@@ -13,9 +13,9 @@ FactoryBot.define do
         parent_cat{nil}
       end
 
-      after(:create) do |invoice, evaluator|
-        invoice.category.parent = evaluator.parent_cat
-        # create :line_item, invoice: invoice, amount: evaluator.amount
+      after(:create) do |product, evaluator|
+        product.category.parent = evaluator.parent_cat
+        product.category.save
       end
     end
   end
