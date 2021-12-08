@@ -59,3 +59,5 @@ group :production do
 end
 
 gem "figaro", "~> 1.2"
+
+gem "rails-controller-testing", "~> 1.0"
