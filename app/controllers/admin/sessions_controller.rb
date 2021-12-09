@@ -2,7 +2,9 @@ class Admin::SessionsController < Admin::BaseController
   layout "../admin/sessions/base", only: [:new]
   before_action :require_admin_user, except: [:new, :create]
 
-  def new; end
+  def new
+    redirect_to admin_root_url if current_user
+  end
 
   def create
     @current_user = User.find_by email: params[:login][:email]
