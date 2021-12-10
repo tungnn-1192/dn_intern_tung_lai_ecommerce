@@ -20,7 +20,6 @@ RSpec.describe SessionsController, type: :controller do
       get :new
       expect(response).to render_template("new")
     end
-
     it "redirects to root url if user logged in" do
       sign_in user
       get :new
@@ -54,7 +53,6 @@ RSpec.describe SessionsController, type: :controller do
         before do
           password_login admin
         end
-
         it{should set_flash[:warning].to(I18n.t("admins_not_allowed"))}
         it{should redirect_to(action: :new)}
       end
