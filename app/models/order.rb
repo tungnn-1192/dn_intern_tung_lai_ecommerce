@@ -2,6 +2,7 @@ class Order < ApplicationRecord
   enum status: {pending: 0, rejected: 1, canceled: 2,
                 delivering: 3, delivered: 4}
 
+  validates :status, inclusion: {in: statuses.keys}
   belongs_to :user
   has_many :order_items, dependent: :destroy
   has_many :products, through: :order_items, dependent: :destroy
