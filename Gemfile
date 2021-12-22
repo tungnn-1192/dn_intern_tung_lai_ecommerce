@@ -73,3 +73,6 @@ gem "rack-cors", "~> 1.1"
 gem "jwt", "~> 2.3"
 
 gem "grape-route-helpers", "~> 2.1"
+gem "active_model_serializers", "~> 0.10.0"
+
+gem "ransack", "~> 2.4"
